@@ -153,16 +153,13 @@ function make_a_new_quiz() {
     Logger.log(colors);
 
     if(qtype=='MTF'){ // Multiple choice
+      //need a make a loop that takes the value and correctness and create the choises 
+      for (var k=0;k<options.length;k++) {
       //form.addMultipleChoiceItem()
       var item = form.addCheckboxItem()
-       
-     // item.setHelpText(desc) // desc == explanation not needed right now 
-      
+      // item.setHelpText(desc) // desc == explanation not needed right now 
       var true_checkboxes = [item.createChoice('True',true),item.createChoice('False',false)]
       var false_checkboxes = [item.createChoice('True',false),item.createChoice('False',true)]
-      
-      //need a make a loop that takes the value and correctness and create the choises 
-        for (var k=0;k<options.length;k++) {
           item.setTitle(options[k]) // text == question
           if (correctness[k]==true){
             item.setChoices(true_checkboxes);
@@ -172,9 +169,7 @@ function make_a_new_quiz() {
             item.setChoices(false_checkboxes);
             item.setPoints(10);
           }
-        
         }
-      
       //item.setChoices(checkboxes);
       //item.setPoints(10); 
     }
