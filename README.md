@@ -220,3 +220,11 @@ function make_a_new_quiz() {
 If you've added your own file IDs, you can run this script and it will make you a new Google Forms Quiz!
 
 You'll need to add your own answer key and feedback, but this will allow you to reuse questions from one year to the next. 
+
+TODO:
+- [] add feedback with explanation
+- [] add dynamic list sizing
+- [] add optional images
+- [] add answer shortcodes in testbank inputs 
+- [] add keywords tagging in testbank inputs
+
